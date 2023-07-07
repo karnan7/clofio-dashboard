@@ -1,0 +1,96 @@
+.sidebar{
+    padding: 20px 50px;
+    background: #CFE2F3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    cursor: pointer;
+}
+.menu{
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+    mix-blend-mode: difference;
+}
+.menu span{
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+.points{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    background-color: #61b2e4;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.profile{
+    height: 60px;
+    width: 60px;
+    background-color: #AFA2CC;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media  (max-width: 1300px){
+    .sidebar,
+    .first,
+    .points{
+        flex-direction: row;
+    }
+}
+
+@media  (max-width: 600px){
+    .sidebar{
+        padding: 20px;
+    }
+    .menu{
+        display: flex;
+        z-index: 99;
+        position: absolute;
+        top: 15px;
+        left: 10;
+    }
+    .points{
+        display: none;
+    }
+    .points-active{
+        display: flex;
+        gap: 25px;
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        background: black;
+        width: 30%;
+        align-items: center;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 9;
+    }
+}

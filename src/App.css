@@ -1,0 +1,57 @@
+.container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.right-section{
+  width: 100%;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  pointer-events: none;
+}
+header span{
+  color: rgb(70, 69, 69);
+}
+.card-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  cursor: pointer;
+}
+.table-section{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media  (max-width: 1300px) {
+  .container{
+    flex-direction: column;
+    overflow-y: visible;
+  }
+}
+@media  (max-width: 1100px){
+  .card-section{
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media  (max-width: 800px){
+  header{
+    flex-direction: column;
+    font-size: 10px;
+  }
+  .right-section{
+    padding: 5px;
+  }
+}
